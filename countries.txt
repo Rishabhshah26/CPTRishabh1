@@ -1,0 +1,55 @@
+Capital of Malaysia
+Ulaanbaatar
+Jakarta
+Manila
+Kuala Lumpur
+Capital of Uruguay
+Brasiília
+Montévideo
+Buenos Aires
+Lima
+Capital of Belgium
+Brussels
+Bern
+Salzburg
+Lisbon
+Capital of Morocco
+Barcelona
+Porto
+Casablanca
+Rabat
+Capital of India
+Karachi
+Mumbai
+New Delhi
+Colombo
+Capital of Mexico
+Cancun
+Mexico City
+Jalisco
+Yucatán
+Capital of Iran
+Baghdad
+Palestine
+Tehran
+Shiraz
+Capital of Canada
+Toronto
+Vancouver
+Saskatoon
+Ottawa
+Capital of Italy
+Vatican
+Milan
+Rome
+Sicily
+Capital of Germany
+Munich
+Berlin 
+Frankfurt
+London
+Capital of Brazil
+Brasilia
+Rio De Janeiro
+Santiago
+Quito
