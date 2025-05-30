@@ -13,7 +13,7 @@ Which Phase is the MCU currently on?
 3
 4
 5
-Which Marvel character was Born on Asguard?
+Which Marvel character was Born on Asgard?
 Loki
 Thor
 The Hulk
@@ -38,5 +38,28 @@ Which year was Avengers: Endgame created?
 2021
 2019
 2016
-
-
+What is The Hulk's human name?
+Steve Rodgers
+Scott Lang
+Bruce Banner
+Peter Parker
+Which Infinity Stone is lodged in Vision's head?
+Soul Stone
+Time Stone
+Mind Stone
+Reality Stone
+Which country is the Black Panther the leader of?
+Sokovia
+Asgard
+Latveria 
+Wakanda
+What is Captain America's Shield made of?
+Adamantium
+Titanium
+Iron
+Vibranium
+What is the name of Thor's original Hammer?
+Gungnir
+Stormbreaker
+Mjölnir
+Excalibur
