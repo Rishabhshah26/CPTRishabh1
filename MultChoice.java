@@ -8,7 +8,7 @@ public class MultChoice{
 		
 		String strDecision2;
 		
-		con.println("Would you like to: A - Play a Quiz, B - View Leaderboard, C - Add Quiz, C - Quit");
+		con.println("Would you like to: A - Play a Quiz, B - View Leaderboard, C - Add Quiz, D - Quit");
 		strDecision = con.readLine();
 		
 		if(strDecision.equalsIgnoreCase("A")){	
@@ -19,11 +19,15 @@ public class MultChoice{
 			if(strDecision2.equalsIgnoreCase("A")){
 			
 			
-				TextInputFile marvel = new TextInputFile("MCU.txt"); 
+				 
 		
 				String strMCU [][];
-				strMCU = new String [13][6];
-		
+				strMCU = new String [6][13];
+				String strName;
+				con.println("What is your name?");
+				strName = con.readLine();	
+				
+				TextInputFile marvel = new TextInputFile("MCU.txt");	
 
 				String strQuestion;
 				String strA;
@@ -31,8 +35,10 @@ public class MultChoice{
 				String strC;
 				String strD;
 				String strAns = "";
+				String strSelect;
 				int intBSort; 
 				int intCount = 0;
+				int intSpot;
 			
 				while(marvel.eof()== false){
 					if(intCount >= 13){
@@ -46,20 +52,37 @@ public class MultChoice{
 						intBSort = (int)(Math.random()*100+1);
 		
 		
-						strMCU[intCount][0] = strQuestion;
-						strMCU[intCount][1] = strA;
-						strMCU[intCount][2] = strB;
-						strMCU[intCount][3] = strC;
-						strMCU[intCount][4] = strD;
-						strMCU[intCount][5] = strAns;
-						strMCU[intCount][6] = Integer.toString(intBSort);
-	
+						strMCU[0][intCount] = strQuestion;
+						strMCU[1][intCount] = strA;
+						strMCU[2][intCount] = strB;
+						strMCU[3][intCount] = strC;
+						strMCU[4][intCount] = strD;
+						strMCU[5][intCount] = strAns;
+						strMCU[6][intCount] = Integer.toString(intBSort);
+						 
+						 
+						// sorting array
+						
+						if(Integer.parseInt(strMCU[6][intCount]) > Integer.parseInt(strMCU[6][intCount + 1])){
+							intSpot = Integer.parseInt(strMCU[6][intCount]);
+							strMCU[6][intCount + 1] = strMCU[6][intCount];
+							strMCU[6][intCount] = Integer.toString(intSpot);
+						} 
+					
+					con.println(strMCU[0][intCount]+ strMCU[1][intCount] + strMCU[2][intCount]+ strMCU[3][intCount]+ strMCU[4][intCount]);
+					strSelect = con.readLine();
+					if(strSelect.equalsIgnoreCase(strAns)){
+						con.println("Correct!");
+					}else{
+						con.println("False...");
 					}
-			
-			
-		
+				
+								
+					}
+				
 				}
-		}
+				
 			}
+		}
 	}
 }
