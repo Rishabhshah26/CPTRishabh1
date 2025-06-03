@@ -32,7 +32,7 @@ public class MultChoice{
 				String strD;
 				String strAns = "";
 				int intBSort; 
-				intCount = 0;
+				int intCount = 0;
 			
 				while(marvel.eof()== false){
 					if(intCount >= 13){
