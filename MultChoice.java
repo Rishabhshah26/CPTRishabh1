@@ -2,7 +2,7 @@ import arc.*;
 
 public class MultChoice{
 	public static void main(String[] args){
-		Console con = new Console();
+		Console con = new Console("MultChoice", 1280, 720);
 		
 		String strDecision;
 		
