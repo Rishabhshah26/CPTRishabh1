@@ -8,7 +8,9 @@ public class MultChoice{
 		
 		String strDecision2;
 		
-		con.println("Would you like to: A - Play a Quiz, B - View Leaderboard, C - Add Quiz, D - Quit");
+		String strHelpDecision;
+		
+		con.println("Would you like to: A - Play a Quiz, B - View Leaderboard, C - Add Quiz, D - Quit, \nH - Help");
 		strDecision = con.readLine();
 		
 		if(strDecision.equalsIgnoreCase("A")){	
@@ -83,6 +85,19 @@ public class MultChoice{
 				}
 				
 			}
+		} else if(strDecision.equalsIgnoreCase("H")){
+			
+			con.println("Which quiz are you going to play? A - MCU, B - Countries, C - Sports");
+			strHelpDecision = con.readLine();
+			
+			if(strHelpDecision.equalsIgnoreCase("A")){
+				con.println("The MCU is currently in Phase 5. Also, recall the real birthplace of Loki...");
+			} else if(strHelpDecision.equalsIgnoreCase("B")){
+				con.println("The Capital of Brazil is actually not Rio De Janeiro. \nThe Capital of Belgium is also the name of a sprout vegetable");
+			} else{ 
+				con.println("Many people believe that Nikola Jokic deserved the MVP award over the \nCanadian shooting Guard on Oklahoma City. Lionel Messi rejected a roughly \n$1 Billion contract from Al Hilal to move to the South Eastern corner of the USA.");
+			}
+		
 		}
 	}
 }
