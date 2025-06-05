@@ -1,8 +1,13 @@
 import arc.*;
+import java.awt.Color;
+import java.awt.image.BufferedImage;
 
 public class MultChoice{
 	public static void main(String[] args){
 		Console con = new Console("MultChoice", 1280, 720);
+		con.println("\n\n\n\n\n\n\nWelcome to...");
+		BufferedImage trivialogo = con.loadImage("trivialogo.png");
+		con.drawImage(trivialogo, 40, 0);
 		
 		String strDecision;
 		
@@ -10,7 +15,7 @@ public class MultChoice{
 		
 		String strHelpDecision;
 		
-		con.println("Would you like to: A - Play a Quiz, B - View Leaderboard, C - Add Quiz, D - Quit, \nH - Help");
+		con.println("\n\n\n\n\n\n\n\nWould you like to: \nA          - Play a Quiz, \nB          - View Leaderboard, \nC          - Add Quiz, \nD          - Quit, \nH          - Help");
 		strDecision = con.readLine();
 		
 		if(strDecision.equalsIgnoreCase("A")){	
@@ -21,7 +26,6 @@ public class MultChoice{
 			if(strDecision2.equalsIgnoreCase("A")){
 			
 			
-				 
 		
 				String strMCU [][];
 				strMCU = new String [6][13];
@@ -41,6 +45,8 @@ public class MultChoice{
 				int intBSort; 
 				int intCount = 0;
 				int intSpot;
+				double dblpercent;
+				
 			
 				while(marvel.eof()== false){
 					if(intCount >= 13){
@@ -98,6 +104,8 @@ public class MultChoice{
 				con.println("Many people believe that Nikola Jokic deserved the MVP award over the \nCanadian shooting Guard on Oklahoma City. Lionel Messi rejected a roughly \n$1 Billion contract from Al Hilal to move to the South Eastern corner of the USA.");
 			}
 		
+		} else if(strDecision.equalsIgnoreCase("B")){
+		} else if(strDecision.equalsIgnoreCase("C")){
 		}
 	}
 }
