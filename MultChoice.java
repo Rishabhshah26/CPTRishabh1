@@ -97,6 +97,7 @@ public class MultChoice{
 					
 
 					if(strSelect.equalsIgnoreCase(strAns)){
+						
 						con.println("Correct!"); 
 						intCorrect = intCorrect + 1;
 						dblpercent = intCorrect/intCount;
