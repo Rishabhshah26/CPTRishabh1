@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 
 public class MultChoice{
 	public static void main(String[] args){
-		Console con = new Console("MultChoice", 1280, 720);
+		Console con = new Console("MultChoice", 1280, 780);
 		con.println("\n\n\n\n\n\n\nWelcome to...");
 		BufferedImage trivialogo = con.loadImage("trivialogo.png");
 		con.drawImage(trivialogo, 40, 0);
@@ -28,7 +28,7 @@ public class MultChoice{
 			
 		
 				String strMCU [][];
-				strMCU = new String [6][13];
+				strMCU = new String [5][13];
 				String strName;
 				con.println("What is your name?");
 				strName = con.readLine();	
@@ -45,48 +45,71 @@ public class MultChoice{
 				int intBSort; 
 				int intCount = 0;
 				int intSpot;
-				double dblpercent;
+				double dblpercent = 0;
+				int intCorrect = 0;
 				
 			
-				while(marvel.eof()== false){
-					if(intCount >= 13){
-						intCount = intCount + 1;
-						strQuestion = con.readLine();
-						strA = con.readLine();
-						strB = con.readLine();
-						strC = con.readLine();
-						strD = con.readLine();
-			
-						intBSort = (int)(Math.random()*100+1);
+				while(marvel.eof()!= true){
+					intCount = intCount + 1;
+					strQuestion = marvel.readLine();
+					strA = marvel.readLine();
+					strB = marvel.readLine();
+					strC = marvel.readLine();
+					strD = marvel.readLine();
+					strAns = marvel.readLine();
+					
+					con.println("Your name is: "+strName);
+					
+					con.println("Your current score is: "+dblpercent +"/ 13");
+
+
+					con.println(strQuestion);
+					con.println(strA);
+					con.println(strB);
+					con.println(strC);
+					con.println(strD);
+					strSelect = con.readLine();
+					
+					con.setDrawColor(Color.BLACK);
+					con.fillRect(0, 0, 1280, 720);
+//					intBSort = (int)(Math.random()*100+1);
 		
 		
-						strMCU[0][intCount] = strQuestion;
-						strMCU[1][intCount] = strA;
-						strMCU[2][intCount] = strB;
-						strMCU[3][intCount] = strC;
-						strMCU[4][intCount] = strD;
-						strMCU[5][intCount] = strAns;
-						strMCU[6][intCount] = Integer.toString(intBSort);
+/*					strMCU[0][intCount] = strQuestion;
+					strMCU[1][intCount] = strA;
+					strMCU[2][intCount] = strB;
+					strMCU[3][intCount] = strC;
+					strMCU[4][intCount] = strD;
+					strMCU[5][intCount] = strAns;
+//					strMCU[6][intCount] = Integer.toString(intBSort);
+
+*/
+
 						 
 						 
 						// sorting array
 						
-						if(Integer.parseInt(strMCU[6][intCount]) > Integer.parseInt(strMCU[6][intCount + 1])){
-							intSpot = Integer.parseInt(strMCU[6][intCount]);
-							strMCU[6][intCount + 1] = strMCU[6][intCount];
-							strMCU[6][intCount] = Integer.toString(intSpot);
-						} 
+//						if(Integer.parseInt(strMCU[6][intCount]) > Integer.parseInt(strMCU[6][intCount + 1])){
+	//						intSpot = Integer.parseInt(strMCU[6][intCount]);
+		//					strMCU[6][intCount + 1] = strMCU[6][intCount];
+			//				strMCU[6][intCount] = Integer.toString(intSpot);
+				//		} 
 					
-					con.println(strMCU[0][intCount]+ strMCU[1][intCount] + strMCU[2][intCount]+ strMCU[3][intCount]+ strMCU[4][intCount]);
-					strSelect = con.readLine();
+
 					if(strSelect.equalsIgnoreCase(strAns)){
-						con.println("Correct!");
+						con.println("Correct!"); 
+						intCorrect = intCorrect + 1;
+						dblpercent = intCorrect/intCount;
+						
 					}else{
 						con.println("False...");
+						intCorrect = intCorrect + 0;
+						dblpercent = intCorrect/intCount;
+						
 					}
 				
 								
-					}
+					
 				
 				}
 				
@@ -105,6 +128,7 @@ public class MultChoice{
 			}
 		
 		} else if(strDecision.equalsIgnoreCase("B")){
+			
 		} else if(strDecision.equalsIgnoreCase("C")){
 		}
 	}
