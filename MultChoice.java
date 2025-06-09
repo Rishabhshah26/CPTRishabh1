@@ -9,7 +9,7 @@ public class MultChoice{
 		BufferedImage trivialogo = con.loadImage("trivialogo.png");
 		con.drawImage(trivialogo, 40, 0);
 		int intCorrect = 0;
-		int intCount = 1;
+		int intCount = 0;
 		
 		String strDecision;
 		
@@ -50,7 +50,7 @@ public class MultChoice{
 				
 			
 				while(marvel.eof()!= true){
-					intCount = intCount + 1;
+					
 					strQuestion = marvel.readLine();
 					strA = marvel.readLine();
 					strB = marvel.readLine();
@@ -95,16 +95,16 @@ public class MultChoice{
 			//				strMCU[6][intCount] = Integer.toString(intSpot);
 				//		} 
 					
-
+					intCount = intCount + 1;
 					if(strSelect.equalsIgnoreCase(strAns)){
 						
 						con.println("Correct!"); 
 						intCorrect = intCorrect + 1;
-						dblpercent = intCorrect/intCount;
+						dblpercent = (double)intCorrect/intCount;
 						
 					}else{
 						con.println("False...");
-						dblpercent = intCorrect/intCount;
+						dblpercent = (double)intCorrect/intCount;
 						
 					}
 				
