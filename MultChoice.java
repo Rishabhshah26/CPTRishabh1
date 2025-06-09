@@ -50,6 +50,10 @@ public class MultChoice{
 				
 			
 				while(marvel.eof()!= true){
+<<<<<<< HEAD
+=======
+					
+>>>>>>> 53b69e9ca1ec2615ac6dc60e7e35a09d19c02f74
 					strQuestion = marvel.readLine();
 					strA = marvel.readLine();
 					strB = marvel.readLine();
@@ -93,8 +97,13 @@ public class MultChoice{
 		//					strMCU[6][intCount + 1] = strMCU[6][intCount];
 			//				strMCU[6][intCount] = Integer.toString(intSpot);
 				//		} 
+<<<<<<< HEAD
 					intCount ++;
 
+=======
+					
+					intCount = intCount + 1;
+>>>>>>> 53b69e9ca1ec2615ac6dc60e7e35a09d19c02f74
 					if(strSelect.equalsIgnoreCase(strAns)){
 						
 						con.println("Correct!"); 
