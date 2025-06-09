@@ -8,6 +8,8 @@ public class MultChoice{
 		con.println("\n\n\n\n\n\n\nWelcome to...");
 		BufferedImage trivialogo = con.loadImage("trivialogo.png");
 		con.drawImage(trivialogo, 40, 0);
+		int intCorrect = 0;
+		int intCount = 1;
 		
 		String strDecision;
 		
@@ -32,7 +34,6 @@ public class MultChoice{
 				String strName;
 				con.println("What is your name?");
 				strName = con.readLine();	
-				
 				TextInputFile marvel = new TextInputFile("MCU.txt");	
 
 				String strQuestion;
@@ -43,10 +44,9 @@ public class MultChoice{
 				String strAns = "";
 				String strSelect;
 				int intBSort; 
-				int intCount = 0;
 				int intSpot;
-				double dblpercent = 0;
-				int intCorrect = 0;
+				double dblpercent;
+				
 				
 			
 				while(marvel.eof()!= true){
@@ -60,7 +60,7 @@ public class MultChoice{
 					
 					con.println("Your name is: "+strName);
 					
-					con.println("Your current score is: "+dblpercent +"/ 13");
+					
 
 
 					con.println(strQuestion);
@@ -104,20 +104,19 @@ public class MultChoice{
 						
 					}else{
 						con.println("False...");
-						intCorrect = intCorrect + 0;
 						dblpercent = intCorrect/intCount;
 						
 					}
 				
 								
-					
+					con.println("Your current score is: "+dblpercent);
 				
 				}
 				
 			}
 		} else if(strDecision.equalsIgnoreCase("H")){
 			
-			con.println("Which quiz are you going to play? A - MCU, B - Countries, C - Sports");
+			con.println("Which quiz did you need help with? A - MCU, B - Countries, C - Sports");
 			strHelpDecision = con.readLine();
 			
 			if(strHelpDecision.equalsIgnoreCase("A")){

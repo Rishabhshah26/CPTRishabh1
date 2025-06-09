@@ -36,7 +36,7 @@ public class fileIOTesting{
 					strC = marvel.readLine();
 					strD = marvel.readLine();
 					strAns = marvel.readLine();
-					con.println("apdfjas[jf");
+					con.println("apdfjas[jf" +intCount);
 
 					con.println("The question is: " +strQuestion);
 					con.println(strA);
