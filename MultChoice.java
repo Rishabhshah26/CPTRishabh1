@@ -95,7 +95,7 @@ public class MultChoice{
 			//				strMCU[6][intCount] = Integer.toString(intSpot);
 				//		} 
 					
-					intCount = intCount + 1;
+					intCount ++;
 					if(strSelect.equalsIgnoreCase(strAns)){
 						
 						con.println("Correct!"); 
