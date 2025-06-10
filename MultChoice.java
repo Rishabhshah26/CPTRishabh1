@@ -11,10 +11,13 @@ public class MultChoice{
 		int intCorrect = 0;
 		int intCount = 0;
 		
+		TextOutputFile scorelist = new TextOutputFile("leaderboard.txt");
+		
 		String strDecision;
 		
 		String strDecision2;
 		
+
 		String strHelpDecision;
 		String strName;
 		String strQuestion;
@@ -41,7 +44,7 @@ public class MultChoice{
 			
 		
 				String strMCU [][];
-				strMCU = new String [5][13];
+				strMCU = new String [5][12];
 
 				con.println("What is your name?");
 				strName = con.readLine();	
@@ -125,10 +128,190 @@ public class MultChoice{
 				}
 				System.out.println("Score checkpoint");
 				con.println("Your final score was " +intCorrect +" / "+intCount);
+				scorelist.println(strName +" - " +intCorrect +"/"+intCount);
+				marvel.close();
 
 				
 			} else if(strDecision2.equalsIgnoreCase("B")){
+					
+				String strCountries [][];
+				strCountries = new String [5][9];
+
+				con.println("What is your name?");
+				strName = con.readLine();	
+				TextInputFile capitals = new TextInputFile("countries.txt");	
+
+
 				
+				
+			
+				while(capitals.eof()!= true){
+
+					strQuestion = capitals.readLine();
+					strA = capitals.readLine();
+					strB = capitals.readLine();
+					strC = capitals.readLine();
+					strD = capitals.readLine();
+					strAns = capitals.readLine();
+					
+					con.println("Your name is: "+strName);
+					
+					
+
+
+					con.println(strQuestion);
+					con.println(strA);
+					con.println(strB);
+					con.println(strC);
+					con.println(strD);
+					strSelect = con.readLine();
+					
+					con.setDrawColor(Color.BLACK);
+					con.fillRect(0, 0, 1280, 720);
+//					intBSort = (int)(Math.random()*100+1);
+		
+		
+/*					strMCU[0][intCount] = strQuestion;
+					strMCU[1][intCount] = strA;
+					strMCU[2][intCount] = strB;
+					strMCU[3][intCount] = strC;
+					strMCU[4][intCount] = strD;
+					strMCU[5][intCount] = strAns;
+//					strMCU[6][intCount] = Integer.toString(intBSort);
+
+*/
+
+						 
+						 
+						// sorting array
+						
+//						if(Integer.parseInt(strMCU[6][intCount]) > Integer.parseInt(strMCU[6][intCount + 1])){
+	//						intSpot = Integer.parseInt(strMCU[6][intCount]);
+		//					strMCU[6][intCount + 1] = strMCU[6][intCount];
+			//				strMCU[6][intCount] = Integer.toString(intSpot);
+				//		} 
+
+					intCount ++;
+
+
+
+
+
+					if(strSelect.equalsIgnoreCase(strAns)){
+						
+						con.println("Correct!"); 
+						intCorrect = intCorrect + 1;
+						dblpercent = (double)intCorrect/intCount;
+						
+					}else{
+						con.println("False...");
+						dblpercent = (double)intCorrect/intCount;
+						
+					}
+
+								
+					con.println("Your current score is: " +intCorrect +" / "+intCount);
+					
+ 
+				} 
+				if(strName.equalsIgnoreCase("statitan") && intCorrect < 10){
+					intCorrect = intCorrect + 2;
+				}
+				System.out.println("Score checkpoint");
+				con.println("Your final score was " +intCorrect +" / "+intCount);
+				scorelist.println(strName +" - " +intCorrect +"/"+intCount);
+				capitals.close();
+
+			} else{ 
+					
+				String strSports [][];
+				strSports = new String [5][9];
+
+				con.println("What is your name?");
+				strName = con.readLine();	
+				TextInputFile sports = new TextInputFile("Sports.txt");	
+
+
+				
+				
+			
+				while(sports.eof()!= true){
+
+					strQuestion = sports.readLine();
+					strA = sports.readLine();
+					strB = sports.readLine();
+					strC = sports.readLine();
+					strD = sports.readLine();
+					strAns = sports.readLine();
+					
+					con.println("Your name is: "+strName);
+					
+					
+
+
+					con.println(strQuestion);
+					con.println(strA);
+					con.println(strB);
+					con.println(strC);
+					con.println(strD);
+					strSelect = con.readLine();
+					
+					con.setDrawColor(Color.BLACK);
+					con.fillRect(0, 0, 1280, 720);
+//					intBSort = (int)(Math.random()*100+1);
+		
+		
+/*					strMCU[0][intCount] = strQuestion;
+					strMCU[1][intCount] = strA;
+					strMCU[2][intCount] = strB;
+					strMCU[3][intCount] = strC;
+					strMCU[4][intCount] = strD;
+					strMCU[5][intCount] = strAns;
+//					strMCU[6][intCount] = Integer.toString(intBSort);
+
+*/
+
+						 
+						 
+						// sorting array
+						
+//						if(Integer.parseInt(strMCU[6][intCount]) > Integer.parseInt(strMCU[6][intCount + 1])){
+	//						intSpot = Integer.parseInt(strMCU[6][intCount]);
+		//					strMCU[6][intCount + 1] = strMCU[6][intCount];
+			//				strMCU[6][intCount] = Integer.toString(intSpot);
+				//		} 
+
+					intCount ++;
+
+
+
+
+
+					if(strSelect.equalsIgnoreCase(strAns)){
+						
+						con.println("Correct!"); 
+						intCorrect = intCorrect + 1;
+						dblpercent = (double)intCorrect/intCount;
+						
+					}else{
+						con.println("False...");
+						dblpercent = (double)intCorrect/intCount;
+						
+					}
+
+								
+					con.println("Your current score is: " +intCorrect +" / "+intCount);
+					
+ 
+				} 
+				if(strName.equalsIgnoreCase("statitan") && intCorrect < 10){
+					intCorrect = intCorrect + 2;
+				}
+				System.out.println("Score checkpoint");
+				con.println("Your final score was " +intCorrect +" / "+intCount);
+				
+				scorelist.println(strName +" - " +intCorrect +"/"+intCount);
+				sports.close();
 			}
 		} else if(strDecision.equalsIgnoreCase("H")){
 			
@@ -147,5 +330,10 @@ public class MultChoice{
 			
 		} else if(strDecision.equalsIgnoreCase("C")){
 		}
+		
+
+		
+		
+		scorelist.close();
 	}
 }

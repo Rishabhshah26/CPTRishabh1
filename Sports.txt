@@ -1,50 +1,60 @@
 Which team in the MLB is Shohei Ohtani currently on?
-Los Angeles Angels
-Toronto Blue Jays
-New York Yankees
-Los Angeles Dodgers
+A - Los Angeles Angels
+B - Toronto Blue Jays
+C - New York Yankees
+D - Los Angeles Dodgers
+D
 Which team was Kobe Bryant drafted by in the NBA?
-Charlotte Hornets
-Los Angeles Lakers
-New York Knicks
-Milwaukee Bucks
+A - Charlotte Hornets
+B - Los Angeles Lakers
+C - New York Knicks
+D - Milwaukee Bucks
+A
 Which is not a real position in baseball?
-Shortstop
-Keeper
-Center Fielder
-Catcher
-What is the most amount of runs you can score with 1 swing?
-1
-2
-3
-4
+A - Shortstop
+B - Keeper
+C - Center Fielder
+D - Catcher
+B
+What is the most amount of runs you can score with 1 swing of a baseball bat??
+A - 1
+B - 2
+C - 3
+D - 4
+D
 What league were Messi and Ronaldo part of in the 2010s that constituted a well known rivalry called the El Clasico?
-La Liga
-Ligue Un
-Serie A
-MLS
+A - La Liga
+B - Ligue Un
+C - Serie A
+D - MLS
+A
 Which team is Lionel Messi currently on?
-Al Hilal
-Inter Miami
-Barcelona
-Real Madrid
+A - Al Hilal
+B - Inter Miami
+C - Barcelona
+D - Real Madrid
+B
 Which team most recently won the MLB World Series?
-Los Angeles Dodgers
-New York Yankees
-Houston Astros
-Texas Rangers
+A - Los Angeles Dodgers
+B - New York Yankees
+C - Houston Astros
+D - Texas Rangers
+A
 Which player in the NBA won the MVP of the 2024/25 season?
-Nikola Jokic
-Shai Gilgeous-Alexander
-Giannis Antetokounmpo
-LeBron James
+A - Nikola Jokic
+B - Shai Gilgeous-Alexander
+C - Giannis Antetokounmpo
+D - LeBron James
+B
 What is the name of having a Zero score in Tennis?
-Egg
-Love
-Blank
-Nothing
+A - Egg
+B - Love
+C - Blank
+D - Nothing
+B
 Which NFL team won the most recent Super Bowl?
-Kansas City Chiefs
-Philadelphia Eagles
-Buffalo Bills
-Tampa Bay Buccaneers
+A - Kansas City Chiefs
+B - Philadelphia Eagles
+C - Buffalo Bills
+D - Tampa Bay Buccaneers
+B
