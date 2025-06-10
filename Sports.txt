@@ -16,17 +16,17 @@ B - Keeper
 C - Center Fielder
 D - Catcher
 B
-What is the most amount of runs you can score with 1 swing of a baseball bat??
-A - 1
-B - 2
-C - 3
-D - 4
+How many players are on a baseball diamond on the defensive team?
+A - 5
+B - 4
+C - 8
+D - 9
 D
-What league were Messi and Ronaldo part of in the 2010s that constituted a well known rivalry called the El Clasico?
-A - La Liga
+What is the name of the rivalry between Barcelona and Real Madrid?
+A - El Clasico
 B - Ligue Un
-C - Serie A
-D - MLS
+C - Irish Derby
+D - Manchester Derby
 A
 Which team is Lionel Messi currently on?
 A - Al Hilal

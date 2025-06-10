@@ -128,7 +128,7 @@ public class MultChoice{
 				}
 				System.out.println("Score checkpoint");
 				con.println("Your final score was " +intCorrect +" / "+intCount);
-				scorelist.println(strName +" - " +intCorrect +"/"+intCount);
+				scorelist.println("MCU Quiz: "+strName +" - " +intCorrect +"/"+intCount);
 				marvel.close();
 
 				
@@ -214,12 +214,12 @@ public class MultChoice{
 					
  
 				} 
-				if(strName.equalsIgnoreCase("statitan") && intCorrect < 10){
+				if(strName.equalsIgnoreCase("statitan") && intCorrect < 7){
 					intCorrect = intCorrect + 2;
 				}
 				System.out.println("Score checkpoint");
 				con.println("Your final score was " +intCorrect +" / "+intCount);
-				scorelist.println(strName +" - " +intCorrect +"/"+intCount);
+				scorelist.println("Countries Quiz: "+strName +" - " +intCorrect +"/"+intCount);
 				capitals.close();
 
 			} else{ 
@@ -304,13 +304,13 @@ public class MultChoice{
 					
  
 				} 
-				if(strName.equalsIgnoreCase("statitan") && intCorrect < 10){
+				if(strName.equalsIgnoreCase("statitan") && intCorrect < 7){
 					intCorrect = intCorrect + 2;
 				}
 				System.out.println("Score checkpoint");
 				con.println("Your final score was " +intCorrect +" / "+intCount);
 				
-				scorelist.println(strName +" - " +intCorrect +"/"+intCount);
+				scorelist.println("Sports Quiz: "+strName +" - " +intCorrect +"/"+intCount);
 				sports.close();
 			}
 		} else if(strDecision.equalsIgnoreCase("H")){
@@ -327,6 +327,13 @@ public class MultChoice{
 			}
 		
 		} else if(strDecision.equalsIgnoreCase("B")){
+		TextInputFile scoreboard = new TextInputFile("leaderboard.txt");
+		while(scoreboard.eof()== false){
+			String strScoreLine;
+			strScoreLine = scoreboard.readLine();
+			con.println(strScoreLine);
+		}
+			
 			
 		} else if(strDecision.equalsIgnoreCase("C")){
 		}
