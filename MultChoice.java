@@ -10,8 +10,9 @@ public class MultChoice{
 		con.drawImage(trivialogo, 40, 0);
 		int intCorrect = 0;
 		int intCount = 0;
+
 		
-		TextOutputFile scorelist = new TextOutputFile("leaderboard.txt");
+		TextOutputFile scorelist = new TextOutputFile("leaderboard.txt", true);
 		
 		String strDecision;
 		
@@ -327,10 +328,10 @@ public class MultChoice{
 			}
 		
 		} else if(strDecision.equalsIgnoreCase("B")){
-		TextInputFile scoreboard = new TextInputFile("leaderboard.txt");
-		while(scoreboard.eof()== false){
+		TextInputFile scorereader = new TextInputFile("leaderboard.txt");
+		while(scorereader.eof()!= true){
 			String strScoreLine;
-			strScoreLine = scoreboard.readLine();
+			strScoreLine = scorereader.readLine();
 			con.println(strScoreLine);
 		}
 			
@@ -341,6 +342,6 @@ public class MultChoice{
 
 		
 		
-		scorelist.close();
+		//scorelist.close();
 	}
 }
