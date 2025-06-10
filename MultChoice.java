@@ -45,12 +45,12 @@ public class MultChoice{
 				String strSelect;
 				int intBSort; 
 				int intSpot;
-				double dblpercent;
+				double dblpercent = 0;
 				
 				
 			
 				while(marvel.eof()!= true){
-					
+
 					strQuestion = marvel.readLine();
 					strA = marvel.readLine();
 					strB = marvel.readLine();
@@ -94,8 +94,14 @@ public class MultChoice{
 		//					strMCU[6][intCount + 1] = strMCU[6][intCount];
 			//				strMCU[6][intCount] = Integer.toString(intSpot);
 				//		} 
-					
+
 					intCount ++;
+
+
+					intCount ++;
+
+					intCount = intCount + 1;
+
 					if(strSelect.equalsIgnoreCase(strAns)){
 						
 						con.println("Correct!"); 
@@ -109,9 +115,13 @@ public class MultChoice{
 					}
 				
 								
-					con.println("Your current score is: "+dblpercent);
+					con.println("Your current score is: " +intCorrect +" / "+intCount);
 				
-				}
+				} 
+				con.println("Your final score was " + dblpercent+"%");
+
+				
+			} else if(strDecision2.equalsIgnoreCase("B")){
 				
 			}
 		} else if(strDecision.equalsIgnoreCase("H")){
