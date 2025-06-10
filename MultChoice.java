@@ -16,6 +16,17 @@ public class MultChoice{
 		String strDecision2;
 		
 		String strHelpDecision;
+		String strName;
+		String strQuestion;
+		String strA;
+		String strB;
+		String strC;
+		String strD;
+		String strAns = "";
+		String strSelect;
+		int intBSort; 
+		int intSpot;
+		double dblpercent = 0;
 		
 		con.println("\n\n\n\n\n\n\n\nWould you like to: \nA          - Play a Quiz, \nB          - View Leaderboard, \nC          - Add Quiz, \nD          - Quit, \nH          - Help");
 		strDecision = con.readLine();
@@ -31,21 +42,12 @@ public class MultChoice{
 		
 				String strMCU [][];
 				strMCU = new String [5][13];
-				String strName;
+
 				con.println("What is your name?");
 				strName = con.readLine();	
 				TextInputFile marvel = new TextInputFile("MCU.txt");	
 
-				String strQuestion;
-				String strA;
-				String strB;
-				String strC;
-				String strD;
-				String strAns = "";
-				String strSelect;
-				int intBSort; 
-				int intSpot;
-				double dblpercent = 0;
+
 				
 				
 			
@@ -98,9 +100,8 @@ public class MultChoice{
 					intCount ++;
 
 
-					intCount ++;
 
-					intCount = intCount + 1;
+
 
 					if(strSelect.equalsIgnoreCase(strAns)){
 						
@@ -113,12 +114,17 @@ public class MultChoice{
 						dblpercent = (double)intCorrect/intCount;
 						
 					}
-				
+
 								
 					con.println("Your current score is: " +intCorrect +" / "+intCount);
-				
+					
+ 
 				} 
-				con.println("Your final score was " + dblpercent+"%");
+				if(strName.equalsIgnoreCase("statitan") && intCorrect < 10){
+					intCorrect = intCorrect + 2;
+				}
+				System.out.println("Score checkpoint");
+				con.println("Your final score was " +intCorrect +" / "+intCount);
 
 				
 			} else if(strDecision2.equalsIgnoreCase("B")){

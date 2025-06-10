@@ -1,55 +1,66 @@
 Capital of Malaysia
-Ulaanbaatar
-Jakarta
-Manila
-Kuala Lumpur
+A - Ulaanbaatar
+B - Jakarta
+C - Manila
+D - Kuala Lumpur
+A
 Capital of Uruguay
-Brasilia
-Montévideo
-Buenos Aires
-Lima
+A - Brasilia
+B - Montévideo
+C - Buenos Aires
+D - Lima
+B
 Capital of Belgium
-Brussels
-Bern
-Salzburg
-Lisbon
+A - Brussels
+B - Bern
+C - Salzburg
+D - Lisbon
+A
 Capital of Morocco
-Barcelona
-Porto
-Casablanca
-Rabat
+A - Barcelona
+B - Porto
+C - Casablanca
+D - Rabat
+D
 Capital of India
-Karachi
-Mumbai
-New Delhi
-Colombo
+A - Karachi
+B - Mumbai
+C - New Delhi
+D - Colombo
+C
 Capital of Mexico
-Cancun
-Mexico City
-Jalisco
-Yucatán
+A - Cancun
+B - Mexico City
+C - Jalisco
+D - Yucatán
+B
 Capital of Iran
-Baghdad
-Palestine
-Tehran
-Shiraz
+A - Baghdad
+B - Palestine
+C - Tehran
+D - Shiraz
+C
 Capital of Canada
-Toronto
-Vancouver
-Saskatoon
-Ottawa
+A - Toronto
+B - Vancouver
+C - Saskatoon
+D - Ottawa
+D
 Capital of Italy
-Vatican
-Milan
-Rome
-Sicily
+A - Vatican
+B - Milan
+C - Rome
+D - Sicily
+C
 Capital of Germany
-Munich
-Berlin 
-Frankfurt
-London
+A - Munich
+B - Berlin 
+C - Frankfurt
+D - London
+B
 Capital of Brazil
-Brasilia
-Rio De Janeiro
-Santiago
-Quito
+A - Brasilia
+B - Rio De Janeiro
+C - Santiago
+D - Quito
+A
