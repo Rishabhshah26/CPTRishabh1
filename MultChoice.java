@@ -18,7 +18,7 @@ public class MultChoice{
 		
 		String strDecision2;
 		
-
+		String strScoreLine;
 		String strHelpDecision;
 		String strName;
 		String strQuestion;
@@ -37,7 +37,7 @@ public class MultChoice{
 		
 		if(strDecision.equalsIgnoreCase("A")){	
 			
-			con.println("A - MCU, B - Countries, C - Sports");
+			con.println("A - MCU, B - Countries, C - Sports, D - New Quiz");
 			strDecision2 = con.readLine();
 			
 			if(strDecision2.equalsIgnoreCase("A")){
@@ -223,7 +223,7 @@ public class MultChoice{
 				scorelist.println("Countries Quiz: "+strName +" - " +intCorrect +"/"+intCount);
 				capitals.close();
 
-			} else{ 
+			} else if(strDecision2.equalsIgnoreCase("C")){
 					
 				String strSports [][];
 				strSports = new String [5][9];
@@ -313,35 +313,137 @@ public class MultChoice{
 				
 				scorelist.println("Sports Quiz: "+strName +" - " +intCorrect +"/"+intCount);
 				sports.close();
-			}
-		} else if(strDecision.equalsIgnoreCase("H")){
+				}else{
+
+
+					con.println("What is your name?");
+					strName = con.readLine();	
+					TextInputFile newquizquiz = new TextInputFile("NewQuiz1.txt");	
+
+
+				
+				
 			
-			con.println("Which quiz did you need help with? A - MCU, B - Countries, C - Sports");
-			strHelpDecision = con.readLine();
+						while(newquizquiz.eof()!= true){
+	
+						strQuestion = newquizquiz.readLine();
+						strA = newquizquiz.readLine();
+						strB = newquizquiz.readLine();
+						strC = newquizquiz.readLine();
+						strD = newquizquiz.readLine();
+						strAns = newquizquiz.readLine();
+					
+						con.println("Your name is: "+strName);
+					
+					
+
+
+						con.println(strQuestion);
+						con.println(strA);
+						con.println(strB);
+						con.println(strC);
+						con.println(strD);
+						strSelect = con.readLine();
+					
+						con.setDrawColor(Color.BLACK);
+						con.fillRect(0, 0, 1280, 720);
+						intCount ++;
+
+						if(strSelect.equalsIgnoreCase(strAns)){
+						
+							con.println("Correct!"); 
+							intCorrect = intCorrect + 1;
+							dblpercent = (double)intCorrect/intCount;
+						
+						}else{
+							con.println("False...");
+							dblpercent = (double)intCorrect/intCount;
+						
+						}
+
+								
+						con.println("Your current score is: " +intCorrect +" / "+intCount);
+
+					
+ 
+				}
+			} 
+				if(strName.equalsIgnoreCase("statitan") && intCorrect < 7){
+					intCorrect = intCorrect + 2;
+				}
+				System.out.println("Score checkpoint");
+				con.println("Your final score was " +intCorrect +" / "+intCount);
+				
+				scorelist.println("Sports Quiz: "+strName +" - " +intCorrect +"/"+intCount);
+
+		}else if(strDecision.equalsIgnoreCase("H")){
 			
-			if(strHelpDecision.equalsIgnoreCase("A")){
-				con.println("The MCU is currently in Phase 5. Also, recall the real birthplace of Loki...");
-			} else if(strHelpDecision.equalsIgnoreCase("B")){
-				con.println("The Capital of Brazil is actually not Rio De Janeiro. \nThe Capital of Belgium is also the name of a sprout vegetable");
-			} else{ 
-				con.println("Many people believe that Nikola Jokic deserved the MVP award over the \nCanadian shooting Guard on Oklahoma City. Lionel Messi rejected a roughly \n$1 Billion contract from Al Hilal to move to the South Eastern corner of the USA.");
-			}
+				con.println("Which quiz did you need help with? A - MCU, B - Countries, C - Sports");
+				strHelpDecision = con.readLine();
+			
+				if(strHelpDecision.equalsIgnoreCase("A")){
+					con.println("The MCU is currently in Phase 5. Also, recall the real birthplace of Loki...");
+				} else if(strHelpDecision.equalsIgnoreCase("B")){
+					con.println("The Capital of Brazil is actually not Rio De Janeiro. \nThe Capital of Belgium is also the name of a sprout vegetable");
+				} else{ 
+					con.println("Many people believe that Nikola Jokic deserved the MVP award over the \nCanadian shooting Guard on Oklahoma City. Lionel Messi rejected a roughly \n$1 Billion contract from Al Hilal to move to the South Eastern corner of the USA.");
+				}
 		
-		} else if(strDecision.equalsIgnoreCase("B")){
-		TextInputFile scorereader = new TextInputFile("leaderboard.txt");
-		while(scorereader.eof()!= true){
-			String strScoreLine;
-			strScoreLine = scorereader.readLine();
-			con.println(strScoreLine);
+			} else if(strDecision.equalsIgnoreCase("B")){
+				TextInputFile scorereader = new TextInputFile("leaderboard.txt");
+			while(scorereader.eof()!= true){
+				strScoreLine = scorereader.readLine();
+				con.println(strScoreLine);
 		}
 			
 			
 		} else if(strDecision.equalsIgnoreCase("C")){
+			TextOutputFile newquizquiz = new TextOutputFile("NewQuiz1.txt", true);	
+			String strChoice;
+			int intCount2 = 0;
+			while(intCount2 < 20){
+				intCount2 = intCount2 +1;
+				con.println("do you want to add another question? Y for yes, N for no");
+				strChoice = con.readLine();
+		if(strChoice.equalsIgnoreCase("Y")){
+			String strQuizQuestion;
+			String strQuizA;
+			String strQuizB;
+			String strQuizC;
+			String strQuizD;
+			String strQuizAns;
+			con.println("Enter the options in the format, \nA - Option 1 \n B - Option 2 etc.");
+			con.println("Enter a question");
+			strQuizQuestion = con.readLine();
+			con.println("Enter the 1st option");
+			strQuizA = con.readLine();
+			con.println("Enter the 2nd option");
+			strQuizB = con.readLine();
+			con.println("Enter the 3rd option");
+			strQuizC = con.readLine();
+			con.println("Enter the 4th option");
+			strQuizD = con.readLine();
+			con.println("Enter the A, B, C, D, of the correct answer");
+			strQuizAns = con.readLine();	
+		
+			newquizquiz.println(strQuizQuestion);
+			newquizquiz.println(strQuizA);
+			newquizquiz.println(strQuizB);
+			newquizquiz.println(strQuizC);
+			newquizquiz.println(strQuizD);
+			newquizquiz.close();
+		}	
+		}
+		}else{ 
+			
+			
 		}
 		
 
 		
 		
-		//scorelist.close();
 	}
-}
+	
+}	//scorelist.close();
+	
+
