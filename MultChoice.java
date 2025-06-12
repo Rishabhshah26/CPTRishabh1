@@ -1,3 +1,8 @@
+// Rishabh Shah
+//Trivia Legends Multiple Choice
+//June 12th, 2025
+// Version Number 1.0 
+
 import arc.*;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
@@ -13,6 +18,8 @@ public class MultChoice{
 
 		
 		TextOutputFile scorelist = new TextOutputFile("leaderboard.txt", true);
+		// opening leaderboard file to write
+		
 		
 		String strDecision;
 		
@@ -46,6 +53,7 @@ public class MultChoice{
 		
 				String strMCU [][];
 				strMCU = new String [5][12];
+				// creating MCU Array
 
 				con.println("What is your name?");
 				strName = con.readLine();	
